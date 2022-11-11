@@ -1,0 +1,13 @@
+########################
+## Default properties ##
+########################
+# SPRING FRAMEWORK
+server:
+  port: 8080
+  tomcat:
+    threads:
+      max: 50
+    max-connections: 200
+spring:
+  application:
+    name: bo-crm-client

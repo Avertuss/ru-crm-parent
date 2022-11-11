@@ -1,0 +1,10 @@
+########################
+## Default properties ##
+########################
+# SPRING FRAMEWORK
+sphere:
+  web-security:
+    permit-all:
+    - "/actuator/**"
+    - ${rest.api-prefix.internal}**
+    - ${rest.api-prefix.integration}**
