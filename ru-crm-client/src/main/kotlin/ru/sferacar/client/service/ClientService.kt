@@ -6,7 +6,7 @@ import ru.sferacar.client.dto.ClientDto
 
 interface ClientService {
     open fun create(clientDto: ClientDto) : ClientDto
-    open fun update(clientDto: ClientDto) : ClientDto
+    open fun update(id: Long,clientDto: ClientDto) : ClientDto
     open fun getById(id: Long) : ClientDto
     open fun delete(id: Long)
     open fun getAll( pageable: Pageable): Page<ClientDto>

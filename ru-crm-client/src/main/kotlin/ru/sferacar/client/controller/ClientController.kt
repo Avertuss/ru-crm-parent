@@ -22,7 +22,7 @@ class ClientController(var service: ClientService) {
 
     @Operation(summary = "Создать", operationId = "client#Create")
     @PostMapping(produces = [MediaType.APPLICATION_JSON_VALUE])
-    open fun create(@PathVariable id: Long, clientDto: ClientDto): ClientDto {
+    open fun create( clientDto: ClientDto): ClientDto {
         return service.create(clientDto);
     }
 
@@ -35,8 +35,7 @@ class ClientController(var service: ClientService) {
     @Operation(summary = "Обновить по ИД", operationId = "client#updateById")
     @PutMapping(path = ["/{id}"], produces = [MediaType.APPLICATION_JSON_VALUE])
     open fun updateById(@PathVariable id: Long, clientDto: ClientDto): ClientDto {
-        clientDto.apply { this.id = id }
-        return clientDto;
+        return service.update(id,clientDto);
     }
 
 

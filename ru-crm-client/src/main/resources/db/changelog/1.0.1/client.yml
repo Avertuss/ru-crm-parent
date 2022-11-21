@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: kurnosov.r.v
+      changes:
+        - createTable:
+            tableName: client
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(50)
+              - column:
+                  name: phone
+                  type: varchar(11)
+              - column:
+                  name: comment
+                  type: varchar(4000)
